@@ -1,0 +1,5 @@
+# QWERTY alpha layer preset
+
+top:    "Q, W, E, R, T, Y, U, I, O, P"
+home:   "MT(LCTL,A), MT(LALT,S), MT(LSFT,D), MT(LGUI,F), G, H, MT(LGUI,J), MT(LSFT,K), MT(LALT,L), MT(LCTL,SEMI)"
+bottom: "LT(BUTTON,Z), MT(RALT,X), C, V, B, N, M, COMMA, MT(RALT,DOT), LT(BUTTON,SLASH)"

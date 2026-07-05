@@ -1,0 +1,10 @@
+# Symbols layer
+# Miryoku SYM layer | flip variant
+
+rows:
+  1:    "LBRC | AMPS | ASTRK | LPAR | RBRC | NONE | TO(BASE) | TO(EXTRA) | TO(TAP) | BOOT"
+  2:   "COLON | DLLR | PRCNT | CARET | PLUS | NONE | LSFT | LCTL | LALT | LGUI"
+  3: "TILDE | EXCL | AT | HASH | PIPE | NONE | TO(SYM) | TO(MOUSE) | RALT | NONE"
+thumbs:
+  left:  "LPAR | RPAR | UNDER"
+  right: "NONE | NONE | NONE"

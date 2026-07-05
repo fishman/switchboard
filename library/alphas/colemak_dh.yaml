@@ -1,0 +1,5 @@
+# Colemak-DH alpha layer preset
+
+top:    "Q, W, F, P, B, J, L, U, Y, SQT"
+home:   "MT(LCTL,A), MT(LALT,R), MT(LSFT,S), MT(LGUI,T), G, M, MT(LGUI,N), MT(LSFT,E), MT(LALT,I), MT(LCTL,O)"
+bottom: "LT(BUTTON,Z), MT(RALT,X), C, D, V, K, H, COMMA, MT(RALT,DOT), LT(BUTTON,SLASH)"

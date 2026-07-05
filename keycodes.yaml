@@ -1,0 +1,188 @@
+# Firmware-agnostic key name → keycode mappings.
+# Used by the generator to resolve key names into firmware-specific keycodes.
+#
+# Each key has a canonical name and one or more firmware mappings.
+# The generator picks the right mapping based on the target firmware.
+
+firmwares: [zmk, qmk]
+
+# ── basic ───────────────────────────────────────────────────────────────
+basic:
+  NONE:   { zmk: "&none",           qmk: "KC_NO" }
+  TRANS:  { zmk: "&none",           qmk: "_______" }
+  ESC:    { zmk: "&kp ESC",         qmk: "KC_ESC" }
+  TAB:    { zmk: "&kp TAB",         qmk: "KC_TAB" }
+  RET:    { zmk: "&kp RET",         qmk: "KC_ENT" }
+  ENT:    { zmk: "&kp RET",         qmk: "KC_ENT" }
+  SPC:    { zmk: "&kp SPACE",       qmk: "KC_SPC" }
+  BSPC:   { zmk: "&kp BSPC",        qmk: "KC_BSPC" }
+  DEL:    { zmk: "&kp DEL",         qmk: "KC_DEL" }
+  CAPS:   { zmk: "&kp CAPS",        qmk: "KC_CAPS" }
+
+# ── modifiers ───────────────────────────────────────────────────────────
+modifiers:
+  LCTL: { zmk: "&kp LCTRL", qmk: "KC_LCTL" }
+  LALT: { zmk: "&kp LALT",  qmk: "KC_LALT" }
+  LSFT: { zmk: "&kp LSHFT", qmk: "KC_LSFT" }
+  LGUI: { zmk: "&kp LGUI",  qmk: "KC_LGUI" }
+  RCTL: { zmk: "&kp RCTRL", qmk: "KC_RCTL" }
+  RALT: { zmk: "&kp RALT",  qmk: "KC_RALT" }
+  RSFT: { zmk: "&kp RSHFT", qmk: "KC_RSFT" }
+  RGUI: { zmk: "&kp RGUI",  qmk: "KC_RGUI" }
+
+# ── F-keys ──────────────────────────────────────────────────────────────
+f_keys:
+  F1:  { zmk: "&kp F1",  qmk: "KC_F1" }
+  F2:  { zmk: "&kp F2",  qmk: "KC_F2" }
+  F3:  { zmk: "&kp F3",  qmk: "KC_F3" }
+  F4:  { zmk: "&kp F4",  qmk: "KC_F4" }
+  F5:  { zmk: "&kp F5",  qmk: "KC_F5" }
+  F6:  { zmk: "&kp F6",  qmk: "KC_F6" }
+  F7:  { zmk: "&kp F7",  qmk: "KC_F7" }
+  F8:  { zmk: "&kp F8",  qmk: "KC_F8" }
+  F9:  { zmk: "&kp F9",  qmk: "KC_F9" }
+  F10: { zmk: "&kp F10", qmk: "KC_F10" }
+  F11: { zmk: "&kp F11", qmk: "KC_F11" }
+  F12: { zmk: "&kp F12", qmk: "KC_F12" }
+
+# ── navigation ──────────────────────────────────────────────────────────
+navigation:
+  UP:    { zmk: "&kp UP",    qmk: "KC_UP" }
+  DOWN:  { zmk: "&kp DOWN",  qmk: "KC_DOWN" }
+  LEFT:  { zmk: "&kp LEFT",  qmk: "KC_LEFT" }
+  RIGHT: { zmk: "&kp RIGHT", qmk: "KC_RIGHT" }
+  HOME:  { zmk: "&kp HOME",  qmk: "KC_HOME" }
+  END:   { zmk: "&kp END",   qmk: "KC_END" }
+  PGUP:  { zmk: "&kp PG_UP", qmk: "KC_PGUP" }
+  PGDN:  { zmk: "&kp PG_DN", qmk: "KC_PGDN" }
+  INS:   { zmk: "&kp INS",   qmk: "KC_INS" }
+
+# ── letters ─────────────────────────────────────────────────────────────
+letters:
+  A: { zmk: "&kp A", qmk: "KC_A" }
+  B: { zmk: "&kp B", qmk: "KC_B" }
+  C: { zmk: "&kp C", qmk: "KC_C" }
+  D: { zmk: "&kp D", qmk: "KC_D" }
+  E: { zmk: "&kp E", qmk: "KC_E" }
+  F: { zmk: "&kp F", qmk: "KC_F" }
+  G: { zmk: "&kp G", qmk: "KC_G" }
+  H: { zmk: "&kp H", qmk: "KC_H" }
+  I: { zmk: "&kp I", qmk: "KC_I" }
+  J: { zmk: "&kp J", qmk: "KC_J" }
+  K: { zmk: "&kp K", qmk: "KC_K" }
+  L: { zmk: "&kp L", qmk: "KC_L" }
+  M: { zmk: "&kp M", qmk: "KC_M" }
+  N: { zmk: "&kp N", qmk: "KC_N" }
+  O: { zmk: "&kp O", qmk: "KC_O" }
+  P: { zmk: "&kp P", qmk: "KC_P" }
+  Q: { zmk: "&kp Q", qmk: "KC_Q" }
+  R: { zmk: "&kp R", qmk: "KC_R" }
+  S: { zmk: "&kp S", qmk: "KC_S" }
+  T: { zmk: "&kp T", qmk: "KC_T" }
+  U: { zmk: "&kp U", qmk: "KC_U" }
+  V: { zmk: "&kp V", qmk: "KC_V" }
+  W: { zmk: "&kp W", qmk: "KC_W" }
+  X: { zmk: "&kp X", qmk: "KC_X" }
+  Y: { zmk: "&kp Y", qmk: "KC_Y" }
+  Z: { zmk: "&kp Z", qmk: "KC_Z" }
+
+# ── numbers ─────────────────────────────────────────────────────────────
+numbers:
+  "0": { zmk: "&kp N0", qmk: "KC_0" }
+  "1": { zmk: "&kp N1", qmk: "KC_1" }
+  "2": { zmk: "&kp N2", qmk: "KC_2" }
+  "3": { zmk: "&kp N3", qmk: "KC_3" }
+  "4": { zmk: "&kp N4", qmk: "KC_4" }
+  "5": { zmk: "&kp N5", qmk: "KC_5" }
+  "6": { zmk: "&kp N6", qmk: "KC_6" }
+  "7": { zmk: "&kp N7", qmk: "KC_7" }
+  "8": { zmk: "&kp N8", qmk: "KC_8" }
+  "9": { zmk: "&kp N9", qmk: "KC_9" }
+
+# ── symbols ─────────────────────────────────────────────────────────────
+symbols:
+  GRAVE: { zmk: "&kp GRAVE",  qmk: "KC_GRV" }
+  MINUS: { zmk: "&kp MINUS",  qmk: "KC_MINS" }
+  EQUAL: { zmk: "&kp EQUAL",  qmk: "KC_EQL" }
+  LBKT:  { zmk: "&kp LBKT",   qmk: "KC_LBRC" }   # [
+  RBKT:  { zmk: "&kp RBKT",   qmk: "KC_RBRC" }   # ]
+  BSLH:  { zmk: "&kp BSLH",   qmk: "KC_BSLS" }   # \
+  SEMI:  { zmk: "&kp SEMI",   qmk: "KC_SCLN" }   # ;
+  SQT:   { zmk: "&kp SQT",    qmk: "KC_QUOT" }   # '
+  COMMA: { zmk: "&kp COMMA",  qmk: "KC_COMM" }   # ,
+  DOT:   { zmk: "&kp DOT",    qmk: "KC_DOT" }    # .
+  SLASH: { zmk: "&kp SLASH",  qmk: "KC_SLSH" }   # /
+  EXCL:  { zmk: "&kp EXCL",   qmk: "KC_EXLM" }   # !
+  AT:    { zmk: "&kp AT",     qmk: "KC_AT" }     # @
+  HASH:  { zmk: "&kp HASH",   qmk: "KC_HASH" }   # #
+  DLLR:  { zmk: "&kp DLLR",   qmk: "KC_DLR" }    # $
+  PRCNT: { zmk: "&kp PRCNT",  qmk: "KC_PERC" }   # %
+  CARET: { zmk: "&kp CARET",  qmk: "KC_CIRC" }   # ^
+  AMPS:  { zmk: "&kp AMPS",   qmk: "KC_AMPR" }   # &
+  ASTRK: { zmk: "&kp ASTRK",  qmk: "KC_ASTR" }   # *
+  LPAR:  { zmk: "&kp LPAR",   qmk: "KC_LPRN" }   # (
+  RPAR:  { zmk: "&kp RPAR",   qmk: "KC_RPRN" }   # )
+  LBRC:  { zmk: "&kp LBRC",   qmk: "KC_LCBR" }   # {
+  RBRC:  { zmk: "&kp RBRC",   qmk: "KC_RCBR" }   # }
+  COLON: { zmk: "&kp COLON",  qmk: "KC_COLN" }   # :
+  UNDER: { zmk: "&kp UNDER",  qmk: "KC_UNDS" }   # _
+  PIPE:  { zmk: "&kp PIPE",   qmk: "KC_PIPE" }   # |
+  TILDE: { zmk: "&kp TILDE",  qmk: "KC_TILD" }   # ~
+  PLUS:  { zmk: "&kp PLUS",   qmk: "KC_PLUS" }   # +
+
+# ── media ───────────────────────────────────────────────────────────────
+media:
+  VOLU: { zmk: "&kp C_VOL_UP",  qmk: "KC_VOLU" }
+  VOLD: { zmk: "&kp C_VOL_DN",  qmk: "KC_VOLD" }
+  MUTE: { zmk: "&kp C_MUTE",    qmk: "KC_MUTE" }
+  MPLY: { zmk: "&kp C_PP",      qmk: "KC_MPLY" }
+  MPRV: { zmk: "&kp C_PREV",    qmk: "KC_MPRV" }
+  MNXT: { zmk: "&kp C_NEXT",    qmk: "KC_MNXT" }
+  MSTP: { zmk: "&kp C_STOP",    qmk: "KC_MSTP" }
+
+# ── system ──────────────────────────────────────────────────────────────
+system:
+  PSCRN: { zmk: "&kp PSCRN",       qmk: "KC_PSCR" }
+  SLCK:  { zmk: "&kp SLCK",        qmk: "KC_SLCK" }
+  PAUSE: { zmk: "&kp PAUSE_BREAK", qmk: "KC_PAUS" }
+  K_APP: { zmk: "&kp K_APP",       qmk: "KC_APP" }
+  BOOT:  { zmk: "&bootloader",     qmk: "QK_BOOT" }
+
+# ── behavior aliases (resolved by generator, not simple keycodes) ───────
+# These are NOT simple keycodes — they expand into behavior macros.
+# The generator handles them specially.
+behaviors:
+  # MT(mod, key): mod-tap — hold = modifier, tap = key
+  #   args: modifier_name, key_name
+  #   zmk: U_MT(MOD, KEY)
+  #   qmk: MT(MOD, KEY)
+  MT:
+    zmk_template: "U_MT({mod}, {key})"
+    qmk_template: "MT({mod}, {key})"
+    zmk_mod_map:
+      LCTL: LCTRL
+      RCTL: RCTRL
+      LSFT: LSHFT
+      RSFT: RSHFT
+
+  # LT(layer, key): layer-tap — hold = momentary layer, tap = key
+  #   zmk: U_LT(U_LAYER, KEY)
+  #   qmk: LT(LAYER, KEY)
+  LT:
+    zmk_template: "U_LT(U_{layer}, {key})"
+    qmk_template: "LT({layer}, {key})"
+
+  # MO(layer): momentary layer activation
+  MO:
+    zmk_template: "&mo U_{layer}"
+    qmk_template: "MO({layer})"
+
+  # TO(layer): toggle layer
+  TO:
+    zmk_template: "&to U_{layer}"
+    qmk_template: "TO({layer})"
+
+  # TOG(layer): toggle layer on/off
+  TOG:
+    zmk_template: "&tog U_{layer}"
+    qmk_template: "TG({layer})"

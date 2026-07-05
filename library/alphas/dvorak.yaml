@@ -1,0 +1,6 @@
+# Dvorak alpha layer preset
+# Import with: alpha: dvorak
+
+top:    "SQT, COMMA, DOT, P, Y, F, G, C, R, L"
+home:   "MT(LCTL,A), MT(LALT,O), MT(LSFT,E), MT(LGUI,U), I, D, MT(LGUI,H), MT(LSFT,T), MT(LALT,N), MT(LCTL,S)"
+bottom: "LT(BUTTON,SLASH), MT(RALT,Q), J, K, X, B, M, W, MT(RALT,V), LT(BUTTON,Z)"

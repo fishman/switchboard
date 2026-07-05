@@ -1,0 +1,10 @@
+# Number / numpad layer
+# Miryoku NUM layer | flip variant
+
+rows:
+  1:    "LBKT | 7 | 8 | 9 | RBKT | NONE | TO(BASE) | TO(EXTRA) | TO(TAP) | BOOT"
+  2:   "EQUAL | 4 | 5 | 6 | SEMI | NONE | LSFT | LCTL | LALT | LGUI"
+  3: "BSLH | 1 | 2 | 3 | GRAVE | NONE | TO(NUM) | TO(NAV) | RALT | NONE"
+thumbs:
+  left:  "DOT | 0 | MINUS"
+  right: "NONE | NONE | NONE"

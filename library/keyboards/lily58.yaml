@@ -1,0 +1,40 @@
+# Lily58 key positions → human labels (for HTML viewer)
+# Index: "row:col" → display label
+
+# Row 0
+"0:0": esc
+"0:1": "1"
+"0:2": "2"
+"0:3": "3"
+"0:4": "4"
+"0:5": "5"
+"0:6": "6"
+"0:7": "7"
+"0:8": "8"
+"0:9": "9"
+"0:10": "0"
+"0:11": bspc
+
+# Row 1
+"1:0": tab
+"1:11": "["
+
+# Row 2
+"2:0": ctrl
+"2:11": "'"
+
+# Row 3
+"3:0": shift
+"3:5": mute     # inner extra left
+"3:6": play     # inner extra right
+"3:13": shift
+
+# Thumbs
+"T:0": super
+"T:1": fn
+"T:2": num
+"T:3": sym
+"T:4": mouse
+"T:5": nav
+"T:6": media
+"T:7": alt

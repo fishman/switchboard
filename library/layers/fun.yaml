@@ -1,0 +1,10 @@
+# Function keys layer
+# Miryoku FUN layer | flip variant
+
+rows:
+  1:    "F12 | F7 | F8 | F9 | PSCRN | NONE | TO(BASE) | TO(EXTRA) | TO(TAP) | BOOT"
+  2:   "F11 | F4 | F5 | F6 | SLCK | NONE | LSFT | LCTL | LALT | LGUI"
+  3: "F10 | F1 | F2 | F3 | PAUSE | NONE | TO(FUN) | TO(MEDIA) | RALT | NONE"
+thumbs:
+  left:  "K_APP | SPC | TAB"
+  right: "NONE | NONE | NONE"

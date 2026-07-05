@@ -1,0 +1,10 @@
+# Mouse layer
+# Miryoku MOUSE layer | flip variant
+
+rows:
+  1:    "NONE | NONE | NONE | NONE | NONE | NONE | TO(BASE) | TO(EXTRA) | TO(TAP) | BOOT"
+  2:   "NONE | NONE | NONE | NONE | NONE | NONE | LSFT | LCTL | LALT | LGUI"
+  3: "NONE | NONE | NONE | NONE | NONE | NONE | TO(MOUSE) | TO(SYM) | RALT | NONE"
+thumbs:
+  left:  "NONE | NONE | NONE"
+  right: "NONE | NONE | NONE"

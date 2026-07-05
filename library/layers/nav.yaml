@@ -1,0 +1,10 @@
+# Navigation layer
+# Miryoku NAV layer | inverted-T | flip variant
+
+rows:
+  1:    "PGUP | HOME | UP | END | INS | NONE | TO(BASE) | TO(EXTRA) | TO(TAP) | BOOT"
+  2:   "PGDN | LEFT | DOWN | RIGHT | NONE | NONE | LSFT | LCTL | LALT | LGUI"
+  3: "NONE | NONE | NONE | NONE | NONE | NONE | TO(NAV) | TO(NUM) | RALT | NONE"
+thumbs:
+  left:  "DEL | BSPC | RET"
+  right: "NONE | NONE | NONE"

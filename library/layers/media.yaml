@@ -1,0 +1,10 @@
+# Media layer
+# Miryoku MEDIA layer | flip variant
+
+rows:
+  1:    "NONE | NONE | NONE | NONE | NONE | NONE | TO(BASE) | TO(EXTRA) | TO(TAP) | BOOT"
+  2:   "NONE | NONE | NONE | NONE | NONE | NONE | LSFT | LCTL | LALT | LGUI"
+  3: "NONE | NONE | NONE | NONE | NONE | NONE | TO(MEDIA) | TO(FUN) | RALT | NONE"
+thumbs:
+  left:  "MUTE | MPLY | MSTP"
+  right: "NONE | NONE | NONE"

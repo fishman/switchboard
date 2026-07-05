@@ -1,0 +1,126 @@
+meta:
+  name: Lily58 Dvorak
+  author: timebomb
+  firmware: zmk
+  flavor: flip
+physical:
+  keyboard: lily58
+  row_cols:
+    0: 12
+    1: 12
+    2: 12
+    3: 14
+  thumbs: 8
+  miryoku_inner:
+    row_range:
+    - 1
+    - 3
+    col_ranges:
+    - - 1
+      - 5
+    - - 6
+      - 10
+    thumb_ranges:
+    - - 1
+      - 3
+    - - 4
+      - 6
+    outer_thumb_cols:
+    - 0
+    - 7
+behaviors:
+  tap_term_ms: 150
+  quick_tap_ms: 120
+alpha_presets:
+  dvorak:
+    rows:
+      1: SQT  | COMMA | DOT  | P     | Y      | F     | G     | C     | R     | L
+      2: MT(LCTL,A) | MT(LALT,O) | MT(LSFT,E) | MT(LGUI,U) | I | D | MT(LGUI,H) | MT(LSFT,T) | MT(LALT,N) | MT(LCTL,S)
+      3: LT(BUTTON,SLASH) | MT(RALT,Q) | J | K | X | B | M | W | MT(RALT,V) | LT(BUTTON,Z)
+  qwerty:
+    rows:
+      1: Q | W | E | R | T | Y | U | I | O | P
+      2: MT(LCTL,A) | MT(LALT,S) | MT(LSFT,D) | MT(LGUI,F) | G | H | MT(LGUI,J) | MT(LSFT,K) | MT(LALT,L) | MT(LCTL,SEMI)
+      3: LT(BUTTON,Z) | MT(RALT,X) | C | V | B | N | M | COMMA | MT(RALT,DOT) | LT(BUTTON,SLASH)
+  colemak_dh:
+    rows:
+      1: Q | W | F | P | B | J | L | U | Y | SQT
+      2: MT(LCTL,A) | MT(LALT,R) | MT(LSFT,S) | MT(LGUI,T) | G | M | MT(LGUI,N) | MT(LSFT,E) | MT(LALT,I) | MT(LCTL,O)
+      3: LT(BUTTON,Z) | MT(RALT,X) | C | D | V | K | H | COMMA | MT(RALT,DOT) | LT(BUTTON,SLASH)
+layers:
+  base:
+    display: Base (Dvorak)
+    alpha: dvorak
+    rows:
+      0: ESC | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | BSPC
+      1: TAB  | SQT  | COMMA | DOT  | P     | Y      | F     | G     | C     | R     | L     | LBKT
+      2: LCTL | MT(LCTL,A) | MT(LALT,O) | MT(LSFT,E) | MT(LGUI,U) | I | D | MT(LGUI,H) | MT(LSFT,T) | MT(LALT,N) | MT(LCTL,S) | SQT
+      3: LSFT | LT(BUTTON,SLASH) | MT(RALT,Q) | J | K | X | C_MUTE | C_PP | B | M | W | MT(RALT,V) | LT(BUTTON,Z) | RSFT
+    thumbs: LGUI | LT(FUN,DEL) | LT(NUM,BSPC) | LT(SYM,RET) | LT(MOUSE,TAB) | LT(NAV,SPC) | LT(MEDIA,ESC) | RALT
+  extra:
+    display: Extra (QWERTY)
+    alpha: qwerty
+    rows:
+      0: ESC | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | BSPC
+      1: TAB  | Q | W | E | R | T | Y | U | I | O | P | LBKT
+      2: LCTL | MT(LCTL,A) | MT(LALT,S) | MT(LSFT,D) | MT(LGUI,F) | G | H | MT(LGUI,J) | MT(LSFT,K) | MT(LALT,L) | MT(LCTL,SEMI) | SQT
+      3: LSFT | LT(BUTTON,Z) | MT(RALT,X) | C | V | B | C_MUTE | C_PP | N | M | COMMA | MT(RALT,DOT) | LT(BUTTON,SLASH) | RSFT
+    thumbs: LGUI | DEL | BSPC | RET | TAB | SPC | ESC | RALT
+  tap:
+    display: Tap
+    alpha: dvorak
+    rows:
+      0: ESC | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | BSPC
+      1: TAB  | SQT  | COMMA | DOT  | P     | Y      | F     | G     | C     | R     | L     | LBKT
+      2: NONE | A | O | E | U | I | D | H | T | N | S | SQT
+      3: NONE | SLASH | Q | J | K | X | C_MUTE | C_PP | B | M | W | V | Z | RSFT
+    thumbs: LGUI | DEL | BSPC | RET | TAB | SPC | ESC | RALT
+  button:
+    import: button
+    rows:
+      0: NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE
+      1: NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE
+      2: NONE | LGUI | LALT | LCTL | LSFT | NONE | NONE | LSFT | LCTL | LALT | LGUI | NONE
+      3: NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE
+  nav:
+    import: nav
+    rows:
+      0: NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE
+      1: NONE | PGUP | HOME | UP | END | INS | NONE | TO(BASE) | TO(EXTRA) | TO(TAP) | BOOT | NONE
+      2: NONE | PGDN | LEFT | DOWN | RIGHT | NONE | NONE | LSFT | LCTL | LALT | LGUI | NONE
+      3: NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | TO(NAV) | TO(NUM) | RALT | NONE | NONE | NONE
+  mouse:
+    import: mouse
+    rows:
+      0: NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE
+      1: NONE | NONE | NONE | NONE | NONE | NONE | NONE | TO(BASE) | TO(EXTRA) | TO(TAP) | BOOT | NONE
+      2: NONE | NONE | NONE | NONE | NONE | NONE | NONE | LSFT | LCTL | LALT | LGUI | NONE
+      3: NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | TO(MOUSE) | TO(SYM) | RALT | NONE | NONE | NONE
+  media:
+    import: media
+    rows:
+      0: NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE
+      1: NONE | NONE | NONE | NONE | NONE | NONE | NONE | TO(BASE) | TO(EXTRA) | TO(TAP) | BOOT | NONE
+      2: NONE | NONE | NONE | NONE | NONE | NONE | NONE | LSFT | LCTL | LALT | LGUI | NONE
+      3: NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | TO(MEDIA) | TO(FUN) | RALT | NONE | NONE | NONE
+  num:
+    import: num
+    rows:
+      0: NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE
+      1: NONE | LBKT | 7 | 8 | 9 | RBKT | NONE | TO(BASE) | TO(EXTRA) | TO(TAP) | BOOT | NONE
+      2: NONE | EQUAL | 4 | 5 | 6 | SEMI | NONE | LSFT | LCTL | LALT | LGUI | NONE
+      3: NONE | BSLH | 1 | 2 | 3 | GRAVE | NONE | NONE | TO(NUM) | TO(NAV) | RALT | NONE | NONE | NONE
+  sym:
+    import: sym
+    rows:
+      0: NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE
+      1: NONE | LBRC | AMPS | ASTRK | LPAR | RBRC | NONE | TO(BASE) | TO(EXTRA) | TO(TAP) | BOOT | NONE
+      2: NONE | COLON | DLLR | PRCNT | CARET | PLUS | NONE | LSFT | LCTL | LALT | LGUI | NONE
+      3: NONE | TILDE | EXCL | AT | HASH | PIPE | NONE | NONE | TO(SYM) | TO(MOUSE) | RALT | NONE | NONE | NONE
+  fun:
+    import: fun
+    rows:
+      0: NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE | NONE
+      1: NONE | F12 | F7 | F8 | F9 | PSCRN | NONE | TO(BASE) | TO(EXTRA) | TO(TAP) | BOOT | NONE
+      2: NONE | F11 | F4 | F5 | F6 | SLCK | NONE | LSFT | LCTL | LALT | LGUI | NONE
+      3: NONE | F10 | F1 | F2 | F3 | PAUSE | NONE | NONE | TO(FUN) | TO(MEDIA) | RALT | NONE | NONE | NONE
