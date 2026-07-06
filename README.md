@@ -2,7 +2,7 @@
 
 YAML in, ZMK/QMK out.
 
-Define your keyboard layers on the full physical grid. Import from a library of reusable presets. Generates firmware keymaps and an interactive HTML layer viewer.
+Define your keyboard layers on the full physical grid. Import from a library of reusable presets. Generates a self-contained ZMK keymap, config, and an interactive HTML layer viewer. No Miryoku dependency in the output.
 
 ## Quick start
 
@@ -12,18 +12,23 @@ pdm run check      # validate config.yaml
 pdm run generate   # write output/
 ```
 
+Build with ZMK:
+```bash
+west build -- -DZMK_CONFIG=$(pwd)/output -DSHIELD=lily58_left
+```
+
 ## Structure
 
 ```
 switchboard/
-  config.yaml          ← your keyboard layout (edit this)
-  keycodes.yaml        ← firmware-agnostic key → ZMK/QMK mappings
+  config.yaml          <- your keyboard layout (edit this)
+  keycodes.yaml        <- firmware-agnostic key -> ZMK/QMK mappings
   library/
-    alphas/            ← reusable alpha presets
-    layers/            ← reusable layer definitions
-    keyboards/         ← per-keyboard position labels
-  templates/           ← Jinja2 output templates
-  switchboard/         ← compiler (Python)
+    alphas/            <- reusable alpha presets
+    layers/            <- reusable layer definitions
+    keyboards/         <- per-keyboard position labels
+  templates/           <- Jinja2 output templates
+  switchboard/         <- compiler (Python)
 ```
 
 ## Config
@@ -51,7 +56,6 @@ Keys use `|` separator to avoid collision with commas inside behavior tokens.
 
 ## Output
 
-- `lily58.keymap` — Miryoku-compatible ZMK keymap with per-layer outer column macros
-- `custom_config.h` — layer definitions for library-imported layers
-- `custom.conf` — debounce, BLE power
-- `layout.html` — standalone interactive layer viewer (open in browser)
+- `lily58.keymap` - self-contained ZMK keymap (zero external includes)
+- `lily58.conf` - debounce, BLE power
+- `layout.html` - standalone interactive layer viewer

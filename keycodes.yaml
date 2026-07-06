@@ -1,4 +1,4 @@
-# Firmware-agnostic key name → keycode mappings.
+# Firmware-agnostic key name -> keycode mappings.
 # Used by the generator to resolve key names into firmware-specific keycodes.
 #
 # Each key has a canonical name and one or more firmware mappings.
@@ -149,10 +149,10 @@ system:
   BOOT:  { zmk: "&bootloader",     qmk: "QK_BOOT" }
 
 # ── behavior aliases (resolved by generator, not simple keycodes) ───────
-# These are NOT simple keycodes — they expand into behavior macros.
+# These are NOT simple keycodes - they expand into behavior macros.
 # The generator handles them specially.
 behaviors:
-  # MT(mod, key): mod-tap — hold = modifier, tap = key
+  # MT(mod, key): mod-tap - hold = modifier, tap = key
   #   args: modifier_name, key_name
   #   zmk: U_MT(MOD, KEY)
   #   qmk: MT(MOD, KEY)
@@ -165,7 +165,7 @@ behaviors:
       LSFT: LSHFT
       RSFT: RSHFT
 
-  # LT(layer, key): layer-tap — hold = momentary layer, tap = key
+  # LT(layer, key): layer-tap - hold = momentary layer, tap = key
   #   zmk: U_LT(U_LAYER, KEY)
   #   qmk: LT(LAYER, KEY)
   LT:

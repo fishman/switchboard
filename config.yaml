@@ -5,6 +5,7 @@ meta:
   flavor: flip
 physical:
   keyboard: lily58
+  shield: lily58
   row_cols:
     0: 12
     1: 12

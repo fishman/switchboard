@@ -1,4 +1,4 @@
-"""Load keycodes.yaml and provide resolve() for mapping key names → firmware keycodes."""
+"""Load keycodes.yaml and provide resolve() for mapping key names -> firmware keycodes."""
 
 from pathlib import Path
 import yaml
@@ -8,7 +8,7 @@ _KEYCODES_PATH = Path(__file__).parent.parent / "keycodes.yaml"
 with open(_KEYCODES_PATH) as f:
     _data = yaml.safe_load(f)
 
-# Build flat lookup: key_name → {zmk: "...", qmk: "..."}
+# Build flat lookup: key_name -> {zmk: "...", qmk: "..."}
 _lookup: dict[str, dict[str, str]] = {}
 for _category in ["basic", "modifiers", "f_keys", "navigation", "letters",
                    "numbers", "symbols", "media", "system"]:
@@ -22,8 +22,8 @@ _behaviors = _data.get("behaviors", {})
 def resolve(token: str | None, firmware: str = "zmk") -> str:
     """Resolve a key name or behavior token to a firmware keycode string.
 
-    Simple keys:  "ESC" → "&kp ESC" (zmk) or "KC_ESC" (qmk)
-    Behaviors:    "MT(LCTL,A)" → "U_MT(LCTRL, A)" or "MT(MOD_LCTL, KC_A)"
+    Simple keys:  "ESC" -> "&kp ESC" (zmk) or "KC_ESC" (qmk)
+    Behaviors:    "MT(LCTL,A)" -> "U_MT(LCTRL, A)" or "MT(MOD_LCTL, KC_A)"
     """
     if token is None:
         return _lookup.get("NONE", {}).get(firmware, "&none")

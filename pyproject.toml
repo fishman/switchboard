@@ -1,12 +1,13 @@
 [project]
 name = "switchboard"
 version = "0.1.0"
-description = "Keyboard firmware config compiler — YAML in, ZMK/QMK out"
+description = "Keyboard firmware config compiler - YAML in, ZMK/QMK out"
 requires-python = ">=3.10"
 dependencies = [
     "pyyaml>=6.0",
     "jsonschema>=4.20",
     "jinja2>=3.1",
+    "typer>=0.15",
 ]
 
 [build-system]
@@ -17,5 +18,8 @@ build-backend = "pdm.backend"
 distribution = false
 
 [tool.pdm.scripts]
-generate = "python -m switchboard.generate output"
-check = "python -m switchboard.check"
+generate = "python -m switchboard gen"
+check = "python -m switchboard check"
+init-workspace = { shell = "cd output && west init -l . && west update" }
+deploy = "python -m switchboard deploy"
+clean = "python -m switchboard clean"
